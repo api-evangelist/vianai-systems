@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.vian.ai/5.0-r2/api-quickstart.html
+docs: https://docs.vian.ai/5.0-r2/api-quickstart.html
+summary:
+  types:
+  - http
+  - apiKey
+  http_schemes:
+  - bearer
+  api_key_in:
+  - header
+  notes: >-
+    Most hila REST and SDK calls require an authorization bearer token. A token is
+    obtained by POSTing username/password to /v1/user/login and reading access_token
+    from the response; it is then sent on the Authorization header of subsequent calls.
+    A long-lived API key (x-api-key header) is also issued via /v1/user/api-key and is
+    used to download the SDK/CLI wheel from the deployment.
+schemes:
+- name: bearerToken
+  type: http
+  scheme: bearer
+  description: >-
+    Access token returned by POST /v1/user/login (field access_token). Sent as
+    "Authorization: <access_token>" on subsequent REST and SDK requests.
+  token_endpoint: /v1/user/login
+  logout_endpoint: /v1/user/logout
+  sources:
+  - https://docs.vian.ai/5.0-r2/api-quickstart.html
+- name: apiKey
+  type: apiKey
+  in: header
+  name_param: x-api-key
+  description: >-
+    Per-user API key managed via /v1/user/api-key; used as the x-api-key header (e.g.
+    to fetch the vianops-client SDK/CLI wheel from webservices/<host>/v1/sdk).
+  sources:
+  - https://docs.vian.ai/5.0-r2/vianctl.html

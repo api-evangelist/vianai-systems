@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.vian.ai/5.0-r2/vianctl.html
+name: vianctl
+description: >-
+  The Vianai Command Line Interface (vianctl) is the hila platform CLI, run from a local
+  machine to manage and use hila instances on remote machines. It is packaged with the
+  Python client (vianops-client) wheel and wraps the hila REST APIs.
+docs: https://docs.vian.ai/5.0-r2/vianctl.html
+reference: https://docs.vian.ai/5.0-r2/vianctl-reference.html
+install:
+- method: wheel
+  steps:
+  - 'wget --content-disposition --header "x-api-key:<YOUR_API_KEY>" "https://webservices.<STACK>.vianai.site/v1/sdk"'
+  - 'pip install <VIANOPS_CLIENT_version*.whl> --break-system-packages'
+  - 'export PATH=/home/<USERNAME>/.local/bin:.:$PATH'
+command_groups:
+- name: config
+  description: Manage connection to hila stacks (remote deployments).
+  commands:
+  - vianctl config add-stack
+verified_surface: >-
+  Command surface captured from the public vianctl page; the full command tree is in the
+  deployment-hosted vianctl reference. Only the config add-stack flow is quoted verbatim
+  here to avoid fabricating unseen subcommands.

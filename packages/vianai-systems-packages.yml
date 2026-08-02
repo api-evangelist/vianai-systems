@@ -1,0 +1,19 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.vian.ai/5.0-r2/apis.html
+notes: >-
+  Vianai's first-party client (vianops-client) and CLI (vianctl) are distributed as a
+  Python wheel from each customer deployment (webservices/<stack>/v1/sdk), not from a
+  public registry. Checked npm and PyPI (hila, vianai, hila-client, vian, vianai-hila):
+  no public first-party packages found as of 2026-07-21. The wheel below is genuinely
+  first-party but vendor-hosted rather than registry-published.
+packages:
+- language: python
+  registry: vendor
+  name: vianops-client
+  url: https://docs.vian.ai/5.0-r2/apis.html
+  install: 'pip install <VIANOPS_CLIENT_version*.whl>  # wheel fetched from webservices/<stack>/v1/sdk'
+  official: true
+  description: >-
+    Python client SDK — a wrapper around the hila REST API calls with Pydantic models,
+    bundling the vianctl CLI. Downloaded from the deployment using an x-api-key.

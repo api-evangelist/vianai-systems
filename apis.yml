@@ -1,8 +1,27 @@
 aid: vianai-systems
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/vianai-systems.png
 name: Vianai Systems
-description: 'Vianai Systems is a company surfaced as a portfolio company of softbank-vision-fund and
-  added to the API Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a
-  lead awaiting the enrichment pipeline.'
+description: >-
+  Vianai Systems is an enterprise AI company whose hila platform delivers GenAI-based
+  conversational analytics ("talk to your data") alongside a machine-learning model
+  monitoring, deployment, and observability platform. The hila REST APIs and Python
+  client SDK (vianops-client) let teams deploy, manage, and monitor models — covering
+  drift detection, explainability, model performance, alerts, data profiling, inference
+  tracking, pipelines, and segments — driven from a vianctl command-line interface.
+  hila is delivered as a customer-deployed platform (per-tenant *.vianai.site) and is
+  available in Google Cloud Gemini Enterprise. The company is ISO 27001 and SOC 2 compliant.
 url: https://raw.githubusercontent.com/api-evangelist/vianai-systems/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,13 +31,92 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Enterprise
-apis: []
+- Artificial Intelligence
+- Machine Learning
+- MLOps
+- Model Monitoring
+- Analytics
+- Generative AI
+- Observability
+- Conversational Analytics
+apis:
+- name: hila REST API
+  description: >-
+    The hila REST APIs provide CRUD operations to deploy, manage, and monitor machine-learning
+    models — drift detection, explainability, model performance, alerts, data profiling,
+    inference tracking, pipelines, projects, and segments. Authentication is a bearer
+    access_token obtained from POST /v1/user/login. The API is served per customer
+    deployment from the webservices subdomain (e.g. https://webservices.company.vianai.site),
+    with interactive OpenAPI docs at /docs on that host.
+  humanURL: https://docs.vian.ai/5.0-r2/apis.html
+  baseURL: https://webservices.company.vianai.site
+  tags:
+  - Machine Learning
+  - Model Monitoring
+  - MLOps
+  properties:
+  - type: APIReference
+    url: https://docs.vian.ai/5.0-r2/api-list.html
+  - type: GettingStarted
+    url: https://docs.vian.ai/5.0-r2/api-quickstart.html
+  - type: Authentication
+    url: authentication/vianai-systems-authentication.yml
+  - type: Conventions
+    url: conventions/vianai-systems-conventions.yml
+  - type: MCPServer
+    url: mcp/vianai-systems-mcp.yml
+common:
+- type: Website
+  url: https://www.vian.ai
+- type: Documentation
+  url: https://docs.vian.ai
+- type: APIReference
+  url: https://docs.vian.ai/5.0-r2/api-list.html
+- type: GettingStarted
+  url: https://docs.vian.ai/5.0-r2/api-quickstart.html
+- type: Support
+  url: https://www.vian.ai/contact-us
+- type: Blog
+  url: https://www.vian.ai/whatsnew
+- type: GitHubOrganization
+  url: https://github.com/vianai
+- type: TermsOfService
+  url: https://www.vian.ai/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.vian.ai/privacy
+- type: Authentication
+  url: authentication/vianai-systems-authentication.yml
+- type: CLI
+  url: cli/vianai-systems-cli.yml
+- type: Packages
+  url: packages/vianai-systems-packages.yml
+- type: SDKs
+  url: packages/vianai-systems-packages.yml
+- type: Conventions
+  url: conventions/vianai-systems-conventions.yml
+- type: Lifecycle
+  url: lifecycle/vianai-systems-lifecycle.yml
+- type: Conformance
+  url: conformance/vianai-systems-conformance.yml
+- type: Compliance
+  url: conformance/vianai-systems-conformance.yml
+- type: MCPServer
+  url: mcp/vianai-systems-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DomainSecurity
+  url: security/vianai-systems-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1

@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.vian.ai/5.0-r2/api-list.html
+docs: https://docs.vian.ai/5.0-r2/apis.html
+authentication:
+  style: bearer-token
+  detail: >-
+    Bearer access_token from POST /v1/user/login on the Authorization header; x-api-key
+    header for SDK/CLI download. See authentication/vianai-systems-authentication.yml.
+versioning:
+  scheme: uri-path
+  current: v1
+  detail: All documented endpoints are prefixed with /v1/. Docs are separately versioned (e.g. 5.0-r2).
+async_jobs:
+  pattern: submit-status-cancel
+  detail: >-
+    Long-running work (data profiling, data loading, drift detection, explainability,
+    preprocessing, model performance, alerts) follows a consistent async pattern —
+    POST .../submit returns a job_id, GET .../status/{job_id} polls state, and
+    DELETE .../cancel/{job_id} cancels. Some jobs also expose /submit-and-call.
+search:
+  pattern: post-search
+  detail: >-
+    List/query operations are POST .../search bodies (e.g. /v1/projects/search,
+    /v1/models/search, /v1/monitor-alerts/search) rather than GET query strings.
+idempotency:
+  supported: false
+  detail: No idempotency-key header or idempotent-write contract is documented in the public API docs.
+pagination:
+  documented: false
+  detail: Not documented on the public api-list; search endpoints likely carry paging in the request body but it is not published.
+error_envelope:
+  documented: false
+  detail: >-
+    The interactive OpenAPI (FastAPI /docs) is served per deployment and not publicly
+    reachable, so the error envelope is not captured here. FastAPI-style 422 validation
+    responses are implied but not asserted without the spec.
+cross_links:
+  authentication: authentication/vianai-systems-authentication.yml
+  lifecycle: lifecycle/vianai-systems-lifecycle.yml

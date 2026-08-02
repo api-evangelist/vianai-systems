@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: generated
+source: https://docs.vian.ai/5.0-r2/api-list.html
+notes: >-
+  Agent Skills generated from the publicly documented hila REST endpoints (method + path).
+  Steps are grounded in real, published operations; no operationIds are invented. hila's
+  interactive OpenAPI is served per deployment, so operations are referenced by method+path.
+skills:
+- file: vianai-systems-authenticate-and-list-projects.md
+  name: Authenticate to hila and list projects
+  api: https://docs.vian.ai/5.0-r2/api-quickstart.html
+  operations:
+  - POST /v1/user/login
+  - POST /v1/projects/search
+- file: vianai-systems-deploy-and-monitor-model.md
+  name: Register, deploy, and monitor a model
+  api: https://docs.vian.ai/5.0-r2/api-list.html
+  operations:
+  - POST /v1/user/login
+  - POST /v1/model_deployment/createRegisteredModel
+  - POST /v1/model_deployment/registerModelVersion
+  - POST /v1/model_deployment/createModelDeployment
+  - POST /v1/driftdetection/submit
+  - GET /v1/driftdetection/status/{job_id}
+  - POST /v1/alerts/submit

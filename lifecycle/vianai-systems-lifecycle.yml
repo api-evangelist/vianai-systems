@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.vian.ai/5.0-r2/api-list.html
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://docs.vian.ai/5.0-r2/apis.html
+  detail: REST API paths are prefixed /v1/. Product documentation is independently versioned (current 5.0-r2).
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  detail: No public deprecation policy or RFC 8594 Sunset/Deprecation header support is documented.
+sla:
+  url: null
+  detail: hila is a customer-deployed platform; no public multi-tenant SLA/uptime target is published.
+status_page: null
+release_notes:
+  url: https://www.vian.ai/whatsnew
+  detail: Company "What's New" (news/blog/features/white papers); per-deployment release notes ship with the product.
+deprecated_operations: []
