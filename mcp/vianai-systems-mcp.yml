@@ -2,11 +2,10 @@ generated: '2026-07-21'
 method: derived
 status: candidate
 source: https://docs.vian.ai/5.0-r2/api-list.html
-notes: >-
-  No official hosted/remote MCP server was found for Vianai/hila. This is a CANDIDATE
-  tool list derived from the publicly documented hila REST endpoints (method + path from
-  the api-list). Tools map 1:1 to real endpoints; request/response schemas are served by
-  the per-deployment OpenAPI (/docs) and are not reproduced here.
+notes: No official hosted/remote MCP server was found for Vianai/hila. This is a CANDIDATE tool list derived
+  from the publicly documented hila REST endpoints (method + path from the api-list). Tools map 1:1 to
+  real endpoints; request/response schemas are served by the per-deployment OpenAPI (/docs) and are not
+  reproduced here.
 server:
   name: hila
   transport: http
@@ -53,3 +52,9 @@ tools:
 - name: track_inference
   description: Record inference tracking data.
   source_operation: POST /v1/inference-tracking
+deployment:
+  mode: none
+  verified: derived
+  tools: 14
+  checked: '2026-08-12'
+  source: catalog MCP census
