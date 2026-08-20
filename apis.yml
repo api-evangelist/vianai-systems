@@ -36,6 +36,17 @@ tags:
 - Company
 - Enterprise
 - Artificial Intelligence
+- Machine-Learning
+- MLOps
+- Model Monitoring
+- Analytics
+- Generative AI
+- Observability
+- Conversational Analytics
+tags_raw:
+- Company
+- Enterprise
+- Artificial Intelligence
 - Machine Learning
 - MLOps
 - Model Monitoring
@@ -55,6 +66,10 @@ apis:
   humanURL: https://docs.vian.ai/5.0-r2/apis.html
   baseURL: https://webservices.company.vianai.site
   tags:
+  - Machine-Learning
+  - Model Monitoring
+  - MLOps
+  tags_raw:
   - Machine Learning
   - Model Monitoring
   - MLOps
