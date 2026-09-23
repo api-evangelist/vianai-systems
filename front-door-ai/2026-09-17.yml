@@ -1,0 +1,31 @@
+# Front Door AI Index — vianai-systems — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: vianai-systems
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.vian.ai
+  final_host: www.vian.ai
+  ownership: own
+  owner: vianai-systems
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 26
+  host_score: 26
+  density: 44.14
+  words: 589
+  tiers:
+    agentic: 3
+    core: 18
+    model: 5
+  ambiguous: 10
+  top_terms:
+    gen ai: 12
+    AI: 6
+    Gemini: 5
+    agent: 5
+    intelligence: 5
+    conversational AI: 2
+    agentic: 1
