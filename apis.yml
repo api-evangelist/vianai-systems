@@ -48,7 +48,7 @@ tags:
 - Company
 - Enterprise
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - MLOps
 - Model Monitoring
 - Analytics
@@ -66,6 +66,7 @@ tags_raw:
 - Generative AI
 - Observability
 - Conversational Analytics
+- Machine-Learning
 apis:
 - name: hila REST API
   description: >-
@@ -78,13 +79,14 @@ apis:
   humanURL: https://docs.vian.ai/5.0-r2/apis.html
   baseURL: https://webservices.company.vianai.site
   tags:
-  - Machine-Learning
+  - Machine Learning
   - Model Monitoring
   - MLOps
   tags_raw:
   - Machine Learning
   - Model Monitoring
   - MLOps
+  - Machine-Learning
   properties:
   - type: APIReference
     url: https://docs.vian.ai/5.0-r2/api-list.html
